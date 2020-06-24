@@ -70,7 +70,7 @@ private  final String PROJECT ="project—provisionalToken";
 
 
     //     2 从redis里获取大vo数据  讲此小vo封装到大VO
-        //项目token 一般由前端自带传过来
+        //项目token 一般由前端自带传过来  嗯呢
 
         String string = redisUtil.getString(projectInfoVo.getProjectToken());
         JSONObject jsonObject = JSON.parseObject(string);
@@ -79,7 +79,7 @@ private  final String PROJECT ="project—provisionalToken";
         BeanUtils.copyProperties(projectInfoVo, publicPublishvo);
 
 
-        //新的大vo在放回去
+        //新的大vo在放回去 哈哈
         String JSONpublicPublishvo = JSON.toJSONString(publicPublishvo);
 
         redisUtil.setString(projectInfoVo.getProjectToken(), JSONpublicPublishvo);
